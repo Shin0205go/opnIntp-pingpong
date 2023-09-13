@@ -4,7 +4,7 @@ import subprocess
 def run_docker_compose():
     try:
         # docker-compose.ymlがあるディレクトリに移動
-        os.chdir('/Users/xxx/Develop/open-interpreter-docker')
+        os.chdir('/Users/xxx/opnIntp-pingpong')
 
         # docker-compose upを実行
         subprocess.run(["docker-compose", "up", "-d"], check=True)
