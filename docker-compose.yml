@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  open-interpreter:
+    image: ubuntu:open-interpreter-docker
+    container_name: open-interpreter-1
+    volumes:
+      - .:/root
+    stdin_open: true
+    tty: true
+    command: /bin/bash -c "python3 change_systemMessage.py && tail -f /dev/null"
+  open-interpreter2:
+    image: ubuntu:open-interpreter-docker
+    container_name: open-interpreter-2
+    volumes:
+      - .:/root
+    stdin_open: true
+    tty: true
